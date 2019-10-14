@@ -8,6 +8,7 @@ Liscense: MIT
 
 class FBro
 {
+	private $start_dir;
 	private $MAX_UPLOAD_SIZE;
 	private $allow_delete;
 	private $allow_upload;
@@ -18,8 +19,10 @@ class FBro
 	private $disallowed_extensions;
 	private $hidden_extensions;
 
-	public function __construct()
+	public function __construct($start_dir)
 	{
+		$this->start_dir = $start_dir;
+
 		//Disable error report for undefined superglobals
 		error_reporting( error_reporting() & ~E_NOTICE );
 
@@ -32,6 +35,8 @@ class FBro
 
 		$this->disallowed_extensions = ['php'];  // must be an array. Extensions disallowed to be uploaded
 		$this->hidden_extensions = ['php']; // must be an array of lowercase file extensions. Extensions hidden in directory index
+
+		$this->MAX_UPLOAD_SIZE = min(FBro::asBytes(ini_get('post_max_size')), FBro::asBytes(ini_get('upload_max_filesize')));
 
 		$PASSWORD = '';  // Set the password, to access the file manager... (optional)
 
@@ -71,6 +76,30 @@ class FBro
 			if($_COOKIE['_sfm_xsrf'] !== $_POST['xsrf'] || !$_POST['xsrf'])
 				err(403,"XSRF Failure");
 		}
+
+		$this->logger(var_export('Constr: '.$this->start_dir, true));
+		if (isset($_REQUEST['do']) && !empty($_REQUEST['do'])) {
+			$this->actions();
+			exit;
+		}
+	}
+
+	public function display() {
+		require "template3.php";
+	}
+
+	public function getJSVar() {
+		$tmp = "\n// Injected PHP vars\n";
+		$tmp .= 'var MAX_UPLOAD_SIZE = '.$this->getMaxUpFile()."\n";
+		$tmp .= "// End PHP vars\n\n";
+
+		return $tmp;
+	}
+
+	private function logger($mess) {
+		$fd = fopen('/var/www/simple-file-manager/app.log', 'a');
+		fwrite($fd, sprintf("%s : %s\n", date('Y/m/d H:i:s'), $mess));
+		fclose($fd);
 	}
 
 	public static function is_entry_ignored($entry, $allow_show_folders, $hidden_extensions)
@@ -150,6 +179,7 @@ class FBro
 
 	private function list($file)
 	{
+		$this->logger(var_export($file, true));
 		if (is_dir($file)) {
 			$directory = $file;
 			$result = [];
@@ -174,7 +204,6 @@ class FBro
 			FBro::err(412,"Not a Directory");
 		}
 		echo json_encode(['success' => true, 'is_writable' => is_writable($file), 'results' =>$result]);
-		exit;
 	}
 
 	private function delete($file)
@@ -182,7 +211,6 @@ class FBro
 		if($allow_delete) {
 			rmrf($file);
 		}
-		exit;
 	}
 
 	private function mkdir($file)
@@ -194,7 +222,6 @@ class FBro
 			exit;
 		chdir($file);
 		@mkdir($_POST['name']);
-		exit;
 	}
 
 	private function upload($file)
@@ -204,7 +231,6 @@ class FBro
 			err(403,"Files of this type are not allowed.");
 
 		$res = move_uploaded_file($_FILES['file_data']['tmp_name'], $file.'/'.$_FILES['file_data']['name']);
-		exit;
 	}
 
 	private function download($file)
@@ -217,16 +243,31 @@ class FBro
 			strpos('MSIE',$_SERVER['HTTP_REFERER']) ? rawurlencode($filename) : "\"$filename\"" ));
 		ob_flush();
 		readfile($file);
-		exit;
 	}
 
 	public function getMaxUpFile() {
 		return $this->MAX_UPLOAD_SIZE;
 	}
 
-	function display($dir)
+	public function AllowDirectLink() {
+		if ($this->allow_direct_link) return 'true';
+		else return 'false';
+	}
+
+	public function AllowUpload() {
+		return $this->allow_upload;
+	}
+
+	public function AllowCreateFolder() {
+		return $this->allow_create_folder;
+	}
+
+	private function actions()
 	{
-		$file = $_REQUEST['file'] ?: $dir;
+		if (!empty($_REQUEST['file'])) $file = $_REQUEST['file'];
+		else $file = $this->start_dir;
+		
+		$this->logger(var_export('Action: '.$this->start_dir, true));
 		if($_GET['do'] == 'list') {
 			$this->list($file);
 		} elseif ($_POST['do'] == 'delete') {
@@ -238,10 +279,6 @@ class FBro
 		} elseif ($_GET['do'] == 'download') {
 			$this->download($file);
 		}
-		
-		$this->MAX_UPLOAD_SIZE = min(FBro::asBytes(ini_get('post_max_size')), FBro::asBytes(ini_get('upload_max_filesize')));
-		
-		require("template.php");
 	}
 }
 ?>
