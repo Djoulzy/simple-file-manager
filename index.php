@@ -1,7 +1,8 @@
 <?php
 require "FBro.php";
 
-$myBro = new FBro("/var");
-$myBro->display();
-
+$myBro = new FBro("/home/jules");
+// $myBro->display();
+if (!$myBro->doAction())
+    $myBro->display();
 ?>

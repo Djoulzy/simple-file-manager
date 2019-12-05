@@ -61,6 +61,7 @@ class FBro
 		$tmp_dir = dirname($_SERVER['SCRIPT_FILENAME']);
 		if(DIRECTORY_SEPARATOR==='\\') $tmp_dir = str_replace('/',DIRECTORY_SEPARATOR,$tmp_dir);
 		$tmp = FBro::get_absolute_path($tmp_dir . '/' .$_REQUEST['file']);
+		var_dump($tmp);
 		
 		if($tmp === false)
 			err(404,'File or Directory Not Found');
@@ -77,26 +78,30 @@ class FBro
 				err(403,"XSRF Failure");
 		}
 
-		$this->logger(var_export('Constr: '.$this->start_dir, true));
+		self::logger(var_export('Constr: '.$this->start_dir, true));
+	}
+
+	public function doAction() {
 		if (isset($_REQUEST['do']) && !empty($_REQUEST['do'])) {
 			$this->actions();
-			exit;
-		}
+			return true;
+		} else return false;
 	}
 
 	public function display() {
-		require "template3.php";
+		include "template.php";
 	}
 
 	public function getJSVar() {
 		$tmp = "\n// Injected PHP vars\n";
 		$tmp .= 'var MAX_UPLOAD_SIZE = '.$this->getMaxUpFile()."\n";
+		$tmp .= 'var ALLOW_DIRECT_LINK = '.$this->AllowDirectLink()."\n";
 		$tmp .= "// End PHP vars\n\n";
 
 		return $tmp;
 	}
 
-	private function logger($mess) {
+	static public function logger($mess) {
 		$fd = fopen('/var/www/simple-file-manager/app.log', 'a');
 		fwrite($fd, sprintf("%s : %s\n", date('Y/m/d H:i:s'), $mess));
 		fclose($fd);
@@ -179,7 +184,7 @@ class FBro
 
 	private function list($file)
 	{
-		$this->logger(var_export($file, true));
+		self::logger(var_export($file, true));
 		if (is_dir($file)) {
 			$directory = $file;
 			$result = [];

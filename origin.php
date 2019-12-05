@@ -384,6 +384,7 @@ $(function(){
 			$('#breadcrumb').empty().html(renderBreadcrumbs(hashval));
 			if(data.success) {
 				$.each(data.results,function(k,v){
+					console.log(v)
 					$tbody.append(renderFileRow(v));
 				});
 				!data.results.length && $tbody.append('<tr><td class="empty" colspan=5>This folder is empty</td></tr>')
@@ -477,6 +478,5 @@ $(function(){
 </tr></thead><tbody id="list">
 
 </tbody></table>
-<?php echo "TOTO"; ?>
 <footer>simple php filemanager by <a href="https://github.com/jcampbell1">jcampbell1</a></footer>
 </body></html>
