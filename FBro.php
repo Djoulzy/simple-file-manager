@@ -36,7 +36,7 @@ class FBro
 		$this->disallowed_extensions = ['php'];  // must be an array. Extensions disallowed to be uploaded
 		$this->hidden_extensions = ['php']; // must be an array of lowercase file extensions. Extensions hidden in directory index
 
-		$this->MAX_UPLOAD_SIZE = min(FBro::asBytes(ini_get('post_max_size')), FBro::asBytes(ini_get('upload_max_filesize')));
+		$this->MAX_UPLOAD_SIZE = min(self::asBytes(ini_get('post_max_size')), self::asBytes(ini_get('upload_max_filesize')));
 
 		$PASSWORD = '';  // Set the password, to access the file manager... (optional)
 
@@ -57,39 +57,33 @@ class FBro
 
 		// must be in UTF-8 or `basename` doesn't work
 		setlocale(LC_ALL,'en_US.UTF-8');
+		
+		if(DIRECTORY_SEPARATOR==='\\') $this->start_dir = str_replace('/', DIRECTORY_SEPARATOR, $this->start_dir);
+		if (substr($this->start_dir, -1) !== DIRECTORY_SEPARATOR) $this->start_dir .= DIRECTORY_SEPARATOR;
+		$tmp = $this->start_dir . $_REQUEST['file'];
+		
+		self::logger('CHROOT: '.$this->start_dir.' - CWD: '.$_REQUEST['file']);
+		self::logger('Target: '.$tmp);
 
-		$tmp_dir = dirname($_SERVER['SCRIPT_FILENAME']);
-		if(DIRECTORY_SEPARATOR==='\\') $tmp_dir = str_replace('/',DIRECTORY_SEPARATOR,$tmp_dir);
-		$tmp = FBro::get_absolute_path($tmp_dir . '/' .$_REQUEST['file']);
-		var_dump($tmp);
-		
 		if($tmp === false)
-			err(404,'File or Directory Not Found');
-		if(substr($tmp, 0,strlen($tmp_dir)) !== $tmp_dir)
-			err(403,"Forbidden");
+			self::err(404,'File or Directory Not Found');
+		if(substr($tmp, 0,strlen($this->start_dir)) !== $this->start_dir)
+			self::err(403,"Forbidden1");
 		if(strpos($_REQUEST['file'], DIRECTORY_SEPARATOR) === 0)
-			err(403,"Forbidden");
-		
+			self::err(403,"Forbidden2");
 		
 		if(!$_COOKIE['_sfm_xsrf'])
 			setcookie('_sfm_xsrf',bin2hex(openssl_random_pseudo_bytes(16)));
 		if($_POST) {
 			if($_COOKIE['_sfm_xsrf'] !== $_POST['xsrf'] || !$_POST['xsrf'])
-				err(403,"XSRF Failure");
+				self::err(403,"XSRF Failure");
 		}
 
-		self::logger(var_export('Constr: '.$this->start_dir, true));
-	}
-
-	public function doAction() {
 		if (isset($_REQUEST['do']) && !empty($_REQUEST['do'])) {
-			$this->actions();
+			$this->actions($tmp);
 			return true;
-		} else return false;
-	}
-
-	public function display() {
-		include "template.php";
+		}
+		else include "template.php";
 	}
 
 	public function getJSVar() {
@@ -184,29 +178,29 @@ class FBro
 
 	private function list($file)
 	{
-		self::logger(var_export($file, true));
+		self::logger('List: '.$file);
 		if (is_dir($file)) {
 			$directory = $file;
 			$result = [];
 			$files = array_diff(scandir($directory), ['.','..']);
-			foreach ($files as $entry) if (!FBro::is_entry_ignored($entry, $this->allow_show_folders, $this->hidden_extensions)) {
-			$i = $directory . '/' . $entry;
+			foreach ($files as $entry) if (!self::is_entry_ignored($entry, $this->allow_show_folders, $this->hidden_extensions)) {
+			$i = $directory . $entry;
 			$stat = stat($i);
 				$result[] = [
 					'mtime' => $stat['mtime'],
 					'size' => $stat['size'],
 					'name' => basename($i),
-					'path' => preg_replace('@^\./@', '', $i),
+					'path' => preg_replace('@^\./@', '', str_replace($this->start_dir, '', $i)),
 					'is_dir' => is_dir($i),
 					'is_deleteable' => $this->allow_delete && ((!is_dir($i) && is_writable($directory)) ||
-						(is_dir($i) && is_writable($directory) && FBro::is_recursively_deleteable($i))),
+						(is_dir($i) && is_writable($directory) && self::is_recursively_deleteable($i))),
 					'is_readable' => is_readable($i),
 					'is_writable' => is_writable($i),
 					'is_executable' => is_executable($i),
 				];
 			}
 		} else {
-			FBro::err(412,"Not a Directory");
+			self::err(412,"Not a Directory");
 		}
 		echo json_encode(['success' => true, 'is_writable' => is_writable($file), 'results' =>$result]);
 	}
@@ -233,7 +227,7 @@ class FBro
 	{
 		foreach($disallowed_extensions as $ext)
 		if(preg_match(sprintf('/\.%s$/',preg_quote($ext)), $_FILES['file_data']['name']))
-			err(403,"Files of this type are not allowed.");
+			self::err(403,"Files of this type are not allowed.");
 
 		$res = move_uploaded_file($_FILES['file_data']['tmp_name'], $file.'/'.$_FILES['file_data']['name']);
 	}
@@ -267,12 +261,12 @@ class FBro
 		return $this->allow_create_folder;
 	}
 
-	private function actions()
+	private function actions($file)
 	{
-		if (!empty($_REQUEST['file'])) $file = $_REQUEST['file'];
-		else $file = $this->start_dir;
+		// if (!empty($_REQUEST['file'])) $file = $_REQUEST['file'];
+		// else $file = $this->start_dir;
 		
-		$this->logger(var_export('Action: '.$this->start_dir, true));
+		self::logger('Action: '.$file);
 		if($_GET['do'] == 'list') {
 			$this->list($file);
 		} elseif ($_POST['do'] == 'delete') {

@@ -798,3 +798,433 @@ Strating...
 2019/12/05 17:50:47 : 'Constr: /home/jules'
 2019/12/05 17:50:47 : 'Action: /home/jules'
 2019/12/05 17:50:47 : '/home/jules'
+2019/12/05 21:09:42 : 'Constr: /home/jules'
+2019/12/05 21:09:43 : 'Constr: /home/jules'
+2019/12/05 21:09:43 : 'Action: /home/jules'
+2019/12/05 21:09:43 : '/home/jules'
+2019/12/05 21:20:31 : 'CHROOT: /home/jules'
+2019/12/05 21:20:31 : 'CHROOT: /home/jules'
+2019/12/05 21:20:31 : 'Action: /home/jules'
+2019/12/05 21:20:31 : '/home/jules'
+2019/12/05 21:21:30 : 'CHROOT: /home/jules'
+2019/12/05 21:21:31 : 'CHROOT: /home/jules'
+2019/12/05 21:21:31 : 'Action: /home/jules'
+2019/12/05 21:21:31 : '/home/jules'
+2019/12/05 21:22:09 : 'CHROOT: /tmp'
+2019/12/05 21:22:09 : 'CHROOT: /tmp'
+2019/12/05 21:22:09 : 'Action: /tmp'
+2019/12/05 21:22:09 : '/tmp'
+2019/12/05 21:22:20 : 'CHROOT: /tmp'
+2019/12/05 21:22:20 : 'CHROOT: /tmp'
+2019/12/05 21:22:20 : 'Action: /tmp'
+2019/12/05 21:22:20 : '/tmp'
+2019/12/05 21:22:27 : 'CHROOT: /tmp'
+2019/12/05 21:22:27 : 'CHROOT: /tmp'
+2019/12/05 21:22:27 : 'Action: /tmp'
+2019/12/05 21:22:27 : '/tmp'
+2019/12/05 21:22:48 : 'CHROOT: /tmp'
+2019/12/05 21:22:48 : 'CHROOT: /tmp'
+2019/12/05 21:22:48 : 'Action: /tmp'
+2019/12/05 21:22:48 : '/tmp'
+2019/12/05 21:23:08 : 'CHROOT: /home/jules'
+2019/12/05 21:23:16 : 'CHROOT: /home/jules'
+2019/12/05 21:23:16 : 'CHROOT: /home/jules'
+2019/12/05 21:23:16 : 'Action: /home/jules'
+2019/12/05 21:23:16 : '/home/jules'
+2019/12/05 21:26:38 : 'CHROOT: /home/jules'
+2019/12/05 21:26:38 : 'CHROOT: /home/jules'
+2019/12/05 21:27:40 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:27:40 : CHROOT: /home/jules - CWD: /home/jules/.config
+2019/12/05 21:27:49 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:27:50 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:27:50 : 'Action: /home/jules'
+2019/12/05 21:27:50 : '/home/jules'
+2019/12/05 21:29:23 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:29:23 : Target: /var/www/simple-file-manager/
+2019/12/05 21:29:23 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:29:23 : Target: /var/www/simple-file-manager/
+2019/12/05 21:29:23 : 'Action: /home/jules'
+2019/12/05 21:29:23 : '/home/jules'
+2019/12/05 21:31:08 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:31:08 : Target: /home/
+2019/12/05 21:31:08 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:31:08 : Target: /home/
+2019/12/05 21:31:08 : 'Action: /home/jules'
+2019/12/05 21:31:08 : '/home/jules'
+2019/12/05 21:33:02 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:33:02 : Target: /home/jules/
+2019/12/05 21:33:02 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:33:02 : Target: /home/jules/
+2019/12/05 21:33:02 : 'Action: /home/jules'
+2019/12/05 21:33:02 : '/home/jules'
+2019/12/05 21:33:11 : CHROOT: /home/jules - CWD: /home/jules/ff
+2019/12/05 21:33:11 : Target: /home/jules//home/jules/ff
+2019/12/05 21:44:14 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:44:14 : Target: /home/jules/
+2019/12/05 21:44:14 : 'Action: /home/jules'
+2019/12/05 21:44:14 : '/home/jules'
+2019/12/05 21:44:15 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:44:15 : Target: /home/jules/
+2019/12/05 21:44:15 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:44:15 : Target: /home/jules/
+2019/12/05 21:44:15 : 'Action: /home/jules'
+2019/12/05 21:44:15 : '/home/jules'
+2019/12/05 21:46:22 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:46:22 : Target: /home/jules/
+2019/12/05 21:46:22 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:46:22 : Target: /home/jules/
+2019/12/05 21:46:22 : 'Action: /home/jules'
+2019/12/05 21:46:22 : '/home/jules'
+2019/12/05 21:46:36 : CHROOT: /home/jules - CWD: /home/jules/tinymce
+2019/12/05 21:46:36 : Target: /home/jules//home/jules/tinymce
+2019/12/05 21:46:42 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:46:42 : Target: /home/jules/
+2019/12/05 21:46:42 : 'Action: /home/jules'
+2019/12/05 21:46:42 : '/home/jules'
+2019/12/05 21:47:00 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:47:00 : Target: /home/jules/
+2019/12/05 21:47:00 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:47:00 : Target: /home/jules/
+2019/12/05 21:47:00 : 'Action: /home/jules'
+2019/12/05 21:47:00 : '/home/jules'
+2019/12/05 21:47:22 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:47:22 : Target: /home/jules/
+2019/12/05 21:47:22 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:47:22 : Target: /home/jules/
+2019/12/05 21:47:22 : 'Action: /home/jules'
+2019/12/05 21:47:22 : '/home/jules'
+2019/12/05 21:47:43 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:47:43 : Target: /home/jules/
+2019/12/05 21:47:44 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:47:44 : Target: /home/jules/
+2019/12/05 21:47:44 : 'Action: /home/jules'
+2019/12/05 21:47:44 : '/home/jules'
+2019/12/05 21:48:27 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:48:27 : Target: /home/jules/
+2019/12/05 21:48:27 : 'Action: /home/jules'
+2019/12/05 21:48:27 : '/home/jules'
+2019/12/05 21:52:53 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:52:53 : Target: /home/jules/
+2019/12/05 21:52:53 : 'Action: /home/jules'
+2019/12/05 21:52:53 : '/home/jules'
+2019/12/05 21:53:16 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:53:16 : Target: /home/jules/
+2019/12/05 21:53:16 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:53:16 : Target: /home/jules/
+2019/12/05 21:53:16 : 'Action: /home/jules'
+2019/12/05 21:53:16 : '/home/jules'
+2019/12/05 21:53:21 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 21:53:21 : Target: /home/jules//tinymce
+2019/12/05 21:54:22 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:54:22 : Target: /home/jules
+2019/12/05 21:54:22 : 'Action: /home/jules'
+2019/12/05 21:54:22 : '/home/jules'
+2019/12/05 21:54:23 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:54:23 : Target: /home/jules
+2019/12/05 21:54:23 : CHROOT: /home/jules - CWD: 
+2019/12/05 21:54:23 : Target: /home/jules
+2019/12/05 21:54:23 : 'Action: /home/jules'
+2019/12/05 21:54:23 : '/home/jules'
+2019/12/05 21:54:26 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 21:54:26 : Target: /home/jules/tinymce
+2019/12/05 21:54:58 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 21:54:58 : Target: /home/jules/tinymce
+2019/12/05 21:56:11 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 21:56:11 : Target: /home/jules/tinymce
+2019/12/05 21:57:52 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 21:57:52 : Target: /home/jules//tinymce
+2019/12/05 21:58:00 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 21:58:00 : Target: /home/jules//tinymce
+2019/12/05 22:05:09 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:05:09 : Target: /home/jules
+2019/12/05 22:05:09 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:05:09 : Target: /home/jules/tinymce
+2019/12/05 22:05:30 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:05:30 : Target: /home/jules
+2019/12/05 22:05:31 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:05:31 : Target: /home/jules
+2019/12/05 22:05:31 : 'Action: /home/jules'
+2019/12/05 22:05:31 : '/home/jules'
+2019/12/05 22:05:48 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:05:48 : Target: /home/jules/tinymce
+2019/12/05 22:06:08 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:06:08 : Target: /home/jules/tinymce
+2019/12/05 22:06:18 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:06:18 : Target: /home/jules/tinymce
+2019/12/05 22:08:50 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:08:50 : Target: /home/jules/tinymce
+2019/12/05 22:08:56 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:08:56 : Target: /home/jules
+2019/12/05 22:08:57 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:08:57 : Target: /home/jules/tinymce
+2019/12/05 22:09:49 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:09:49 : Target: /home/jules
+2019/12/05 22:09:49 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:09:49 : Target: /home/jules/tinymce
+2019/12/05 22:10:01 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:10:01 : Target: /home/jules
+2019/12/05 22:10:01 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:10:01 : Target: /home/jules/tinymce
+2019/12/05 22:10:17 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:10:17 : Target: /home/jules/tinymce
+2019/12/05 22:18:34 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:18:34 : Target: /home/jules/tinymce
+2019/12/05 22:19:24 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:19:24 : Target: /home/jules
+2019/12/05 22:19:24 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:19:24 : Target: /home/jules
+2019/12/05 22:19:24 : 'Action: /home/jules'
+2019/12/05 22:19:24 : '/home/jules'
+2019/12/05 22:19:40 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:19:40 : Target: /home/jules/tinymce
+2019/12/05 22:23:11 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:23:11 : Target: /home/jules/
+2019/12/05 22:23:11 : CHROOT: /home/jules - CWD: 
+2019/12/05 22:23:11 : Target: /home/jules/
+2019/12/05 22:23:11 : 'Action: /home/jules/'
+2019/12/05 22:23:11 : '/home/jules/'
+2019/12/05 22:23:15 : CHROOT: /home/jules - CWD: /tinymce
+2019/12/05 22:23:15 : Target: /home/jules//tinymce
+2019/12/05 22:24:15 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:24:15 : Target: /home/jules/
+2019/12/05 22:24:15 : 'Action: /home/jules/'
+2019/12/05 22:24:15 : '/home/jules/'
+2019/12/05 22:24:16 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:24:16 : Target: /home/jules/
+2019/12/05 22:24:16 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:24:16 : Target: /home/jules/
+2019/12/05 22:24:16 : 'Action: /home/jules/'
+2019/12/05 22:24:16 : '/home/jules/'
+2019/12/05 22:24:40 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:24:40 : Target: /home/jules/
+2019/12/05 22:24:40 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:24:40 : Target: /home/jules/
+2019/12/05 22:24:40 : 'Action: /home/jules/'
+2019/12/05 22:24:40 : '/home/jules/'
+2019/12/05 22:24:49 : CHROOT: /home/jules/ - CWD: /tinymce
+2019/12/05 22:24:49 : Target: /home/jules//tinymce
+2019/12/05 22:25:23 : CHROOT: /home/jules/ - CWD: /tinymce
+2019/12/05 22:25:23 : Target: /home/jules//tinymce
+2019/12/05 22:25:57 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:25:57 : Target: /home/jules/
+2019/12/05 22:25:57 : 'Action: /home/jules/'
+2019/12/05 22:25:57 : '/home/jules/'
+2019/12/05 22:26:39 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:26:39 : Target: /home/jules/
+2019/12/05 22:26:39 : 'Action: /home/jules/'
+2019/12/05 22:26:39 : '/home/jules/'
+2019/12/05 22:27:08 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:27:08 : Target: /home/jules/
+2019/12/05 22:27:08 : 'Action: /home/jules/'
+2019/12/05 22:27:08 : '/home/jules/'
+2019/12/05 22:27:38 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:27:38 : Target: /home/jules/
+2019/12/05 22:27:38 : 'Action: /home/jules/'
+2019/12/05 22:27:38 : '/home/jules/'
+2019/12/05 22:28:25 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:28:25 : Target: /home/jules/
+2019/12/05 22:28:25 : 'Action: /home/jules/'
+2019/12/05 22:28:25 : '/home/jules/'
+2019/12/05 22:28:49 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:28:49 : Target: /home/jules/
+2019/12/05 22:28:49 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:28:49 : Target: /home/jules/
+2019/12/05 22:28:49 : 'Action: /home/jules/'
+2019/12/05 22:28:49 : '/home/jules/'
+2019/12/05 22:29:00 : CHROOT: /home/jules/ - CWD: /home/jules/tinymce
+2019/12/05 22:29:00 : Target: /home/jules//home/jules/tinymce
+2019/12/05 22:32:00 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:32:00 : Target: /home/jules/
+2019/12/05 22:32:01 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:32:01 : Target: /home/jules/
+2019/12/05 22:32:01 : 'Action: /home/jules/'
+2019/12/05 22:32:01 : '/home/jules/'
+2019/12/05 22:32:13 : CHROOT: /home/jules/ - CWD: /home/jules/tinymce
+2019/12/05 22:32:13 : Target: /home/jules//home/jules/tinymce
+2019/12/05 22:32:41 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:32:41 : Target: /home/jules/
+2019/12/05 22:32:41 : 'Action: /home/jules/'
+2019/12/05 22:32:41 : '/home/jules/'
+2019/12/05 22:33:25 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:33:25 : Target: /home/jules/
+2019/12/05 22:33:25 : 'Action: /home/jules/'
+2019/12/05 22:33:25 : '/home/jules/'
+2019/12/05 22:33:32 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:33:32 : Target: /home/jules/
+2019/12/05 22:33:32 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:33:32 : Target: /home/jules/
+2019/12/05 22:33:32 : 'Action: /home/jules/'
+2019/12/05 22:33:32 : '/home/jules/'
+2019/12/05 22:33:37 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:33:37 : Target: /home/jules/tinymce
+2019/12/05 22:33:37 : 'Action: /home/jules/'
+2019/12/05 22:33:37 : 'tinymce'
+2019/12/05 22:33:53 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:33:53 : Target: /home/jules/
+2019/12/05 22:33:53 : 'Action: /home/jules/'
+2019/12/05 22:33:53 : '/home/jules/'
+2019/12/05 22:34:32 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:34:32 : Target: /home/jules/tinymce
+2019/12/05 22:34:32 : 'Action: /home/jules/'
+2019/12/05 22:34:32 : 'tinymce'
+2019/12/05 22:35:14 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:35:14 : Target: /home/jules/tinymce
+2019/12/05 22:35:14 : 'Action: /home/jules/'
+2019/12/05 22:35:14 : 'tinymce'
+2019/12/05 22:36:02 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:36:02 : Target: /home/jules/tinymce
+2019/12/05 22:36:02 : 'Action: /home/jules/'
+2019/12/05 22:36:02 : List: tinymce
+2019/12/05 22:36:59 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:36:59 : Target: /home/jules/
+2019/12/05 22:36:59 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:36:59 : Target: /home/jules/
+2019/12/05 22:36:59 : 'Action: /home/jules/'
+2019/12/05 22:36:59 : List: /home/jules/
+2019/12/05 22:37:32 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:37:32 : Target: /home/jules/
+2019/12/05 22:37:32 : 'Action: /home/jules/'
+2019/12/05 22:37:32 : List: /home/jules/
+2019/12/05 22:37:52 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:37:52 : Target: /home/jules/
+2019/12/05 22:37:52 : 'Action: /home/jules/'
+2019/12/05 22:37:52 : List: /home/jules/
+2019/12/05 22:38:06 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:38:06 : Target: /home/jules/
+2019/12/05 22:38:06 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:38:06 : Target: /home/jules/
+2019/12/05 22:38:06 : 'Action: /home/jules/'
+2019/12/05 22:38:06 : List: /home/jules/
+2019/12/05 22:38:10 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:38:10 : Target: /home/jules/tinymce
+2019/12/05 22:38:10 : 'Action: /home/jules/'
+2019/12/05 22:38:10 : List: tinymce
+2019/12/05 22:39:22 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:39:22 : Target: /home/jules/
+2019/12/05 22:39:23 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:39:23 : Target: /home/jules/tinymce
+2019/12/05 22:39:23 : Action: tinymce
+2019/12/05 22:39:23 : List: tinymce
+2019/12/05 22:44:35 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:44:35 : Target: /home/jules/
+2019/12/05 22:44:35 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:44:35 : Target: /home/jules/tinymce
+2019/12/05 22:44:35 : Action: tinymce
+2019/12/05 22:44:35 : List: tinymce
+2019/12/05 22:44:38 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:44:38 : Target: /home/jules/
+2019/12/05 22:44:38 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:44:38 : Target: /home/jules/
+2019/12/05 22:44:38 : Action: /home/jules/
+2019/12/05 22:44:38 : List: /home/jules/
+2019/12/05 22:44:41 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:44:41 : Target: /home/jules/tinymce
+2019/12/05 22:44:41 : Action: tinymce
+2019/12/05 22:44:41 : List: tinymce
+2019/12/05 22:45:08 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:45:08 : Target: /home/jules/
+2019/12/05 22:45:08 : Action: /home/jules/
+2019/12/05 22:45:08 : List: /home/jules/
+2019/12/05 22:45:10 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:45:10 : Target: /home/jules/
+2019/12/05 22:45:10 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:45:10 : Target: /home/jules/
+2019/12/05 22:45:10 : Action: /home/jules/
+2019/12/05 22:45:10 : List: /home/jules/
+2019/12/05 22:45:18 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:45:18 : Target: /home/jules/
+2019/12/05 22:45:18 : Action: /home/jules/
+2019/12/05 22:45:18 : List: /home/jules/
+2019/12/05 22:45:22 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:45:22 : Target: /home/jules/tinymce
+2019/12/05 22:45:22 : Action: /home/jules/tinymce
+2019/12/05 22:45:22 : List: /home/jules/tinymce
+2019/12/05 22:45:32 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:45:32 : Target: /home/jules/
+2019/12/05 22:45:32 : Action: /home/jules/
+2019/12/05 22:45:32 : List: /home/jules/
+2019/12/05 22:45:36 : CHROOT: /home/jules/ - CWD: ff
+2019/12/05 22:45:36 : Target: /home/jules/ff
+2019/12/05 22:45:36 : Action: /home/jules/ff
+2019/12/05 22:45:36 : List: /home/jules/ff
+2019/12/05 22:45:44 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:45:44 : Target: /home/jules/
+2019/12/05 22:45:44 : Action: /home/jules/
+2019/12/05 22:45:44 : List: /home/jules/
+2019/12/05 22:45:53 : CHROOT: /home/jules/ - CWD: .cache
+2019/12/05 22:45:53 : Target: /home/jules/.cache
+2019/12/05 22:45:53 : Action: /home/jules/.cache
+2019/12/05 22:45:53 : List: /home/jules/.cache
+2019/12/05 22:45:54 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:45:54 : Target: /home/jules/
+2019/12/05 22:45:54 : Action: /home/jules/
+2019/12/05 22:45:54 : List: /home/jules/
+2019/12/05 22:45:58 : CHROOT: /home/jules/ - CWD: .local
+2019/12/05 22:45:58 : Target: /home/jules/.local
+2019/12/05 22:45:58 : Action: /home/jules/.local
+2019/12/05 22:45:58 : List: /home/jules/.local
+2019/12/05 22:46:00 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:46:00 : Target: /home/jules/
+2019/12/05 22:46:00 : Action: /home/jules/
+2019/12/05 22:46:00 : List: /home/jules/
+2019/12/05 22:47:08 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:08 : Target: /home/jules/
+2019/12/05 22:47:08 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:08 : Target: /home/jules/
+2019/12/05 22:47:08 : Action: /home/jules/
+2019/12/05 22:47:08 : List: /home/jules/
+2019/12/05 22:47:10 : CHROOT: /home/jules/ - CWD: .config
+2019/12/05 22:47:10 : Target: /home/jules/.config
+2019/12/05 22:47:10 : Action: /home/jules/.config
+2019/12/05 22:47:10 : List: /home/jules/.config
+2019/12/05 22:47:11 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:11 : Target: /home/jules/
+2019/12/05 22:47:11 : Action: /home/jules/
+2019/12/05 22:47:11 : List: /home/jules/
+2019/12/05 22:47:14 : CHROOT: /home/jules/ - CWD: .local
+2019/12/05 22:47:14 : Target: /home/jules/.local
+2019/12/05 22:47:14 : Action: /home/jules/.local
+2019/12/05 22:47:14 : List: /home/jules/.local
+2019/12/05 22:47:15 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:15 : Target: /home/jules/
+2019/12/05 22:47:15 : Action: /home/jules/
+2019/12/05 22:47:15 : List: /home/jules/
+2019/12/05 22:47:16 : CHROOT: /home/jules/ - CWD: .gnupg
+2019/12/05 22:47:16 : Target: /home/jules/.gnupg
+2019/12/05 22:47:16 : Action: /home/jules/.gnupg
+2019/12/05 22:47:16 : List: /home/jules/.gnupg
+2019/12/05 22:47:18 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:18 : Target: /home/jules/
+2019/12/05 22:47:18 : Action: /home/jules/
+2019/12/05 22:47:18 : List: /home/jules/
+2019/12/05 22:47:24 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:24 : Target: /home/jules/
+2019/12/05 22:47:24 : Action: /home/jules/
+2019/12/05 22:47:24 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:24 : Target: /home/jules/
+2019/12/05 22:47:24 : Action: /home/jules/
+2019/12/05 22:47:24 : List: /home/jules/
+2019/12/05 22:47:35 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:35 : Target: /home/jules/
+2019/12/05 22:47:35 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:35 : Target: /home/jules/
+2019/12/05 22:47:35 : Action: /home/jules/
+2019/12/05 22:47:35 : List: /home/jules/
+2019/12/05 22:47:58 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:58 : Target: /home/jules/
+2019/12/05 22:47:58 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:47:58 : Target: /home/jules/
+2019/12/05 22:47:58 : Action: /home/jules/
+2019/12/05 22:47:58 : List: /home/jules/
+2019/12/05 22:48:02 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:48:02 : Target: /home/jules/tinymce
+2019/12/05 22:48:02 : Action: /home/jules/tinymce
+2019/12/05 22:48:02 : List: /home/jules/tinymce
+2019/12/05 22:48:04 : CHROOT: /home/jules/ - CWD: 
+2019/12/05 22:48:04 : Target: /home/jules/
+2019/12/05 22:48:04 : Action: /home/jules/
+2019/12/05 22:48:04 : List: /home/jules/
+2019/12/05 22:48:56 : CHROOT: /home/jules/ - CWD: tinymce
+2019/12/05 22:48:56 : Target: /home/jules/tinymce
+2019/12/05 22:48:56 : Action: /home/jules/tinymce
+2019/12/05 22:48:56 : List: /home/jules/tinymce
