@@ -59,8 +59,9 @@ class FBro
 		setlocale(LC_ALL,'en_US.UTF-8');
 		
 		if(DIRECTORY_SEPARATOR==='\\') $this->start_dir = str_replace('/', DIRECTORY_SEPARATOR, $this->start_dir);
-		if (substr($this->start_dir, -1) !== DIRECTORY_SEPARATOR) $this->start_dir .= DIRECTORY_SEPARATOR;
-		$tmp = $this->start_dir . $_REQUEST['file'];
+		if (substr($this->start_dir, -1) == DIRECTORY_SEPARATOR) $this->start_dir = rtrim($this->start_dir, DIRECTORY_SEPARATOR);
+		if ($_REQUEST['file'][0] == DIRECTORY_SEPARATOR) $_REQUEST['file'] = ltrim($_REQUEST['file'], DIRECTORY_SEPARATOR);
+		$tmp = $this->start_dir .DIRECTORY_SEPARATOR. $_REQUEST['file'];
 		
 		self::logger('CHROOT: '.$this->start_dir.' - CWD: '.$_REQUEST['file']);
 		self::logger('Target: '.$tmp);
@@ -184,13 +185,14 @@ class FBro
 			$result = [];
 			$files = array_diff(scandir($directory), ['.','..']);
 			foreach ($files as $entry) if (!self::is_entry_ignored($entry, $this->allow_show_folders, $this->hidden_extensions)) {
-			$i = $directory . $entry;
+			$i = $directory .DIRECTORY_SEPARATOR. $entry;
 			$stat = stat($i);
 				$result[] = [
 					'mtime' => $stat['mtime'],
 					'size' => $stat['size'],
 					'name' => basename($i),
-					'path' => preg_replace('@^\./@', '', str_replace($this->start_dir, '', $i)),
+					'path' => preg_replace('@^\./@', '', str_replace($this->start_dir.'/', '', $i)),
+					// 'path' => preg_replace('@^\./@', '', $i),
 					'is_dir' => is_dir($i),
 					'is_deleteable' => $this->allow_delete && ((!is_dir($i) && is_writable($directory)) ||
 						(is_dir($i) && is_writable($directory) && self::is_recursively_deleteable($i))),
