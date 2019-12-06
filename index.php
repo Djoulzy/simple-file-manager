@@ -1,6 +1,6 @@
 <?php
 require "FBro.php";
 
-$myBro = new FBro("/home");
+$myBro = new FBro("./config.ini");
 
 ?>

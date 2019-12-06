@@ -21,7 +21,7 @@ function list(tbody, allow_direct_link)
 
 function renderFileRow(data, allow_direct_link) {
     var $link = $('<a class="name" />')
-        .attr('href', data.is_dir ? '#' + encodeURIComponent(data.path) : './'+ encodeURIComponent(data.path))
+        .attr('href', data.is_dir ? '#' + encodeURIComponent(data.path) : '?do=read&file='+ encodeURIComponent(data.path))
         .text(data.name);
     if (!data.is_dir && !allow_direct_link)  $link.css('pointer-events','none');
     var $dl_link = $('<a/>').attr('href','?do=download&file='+ encodeURIComponent(data.path))

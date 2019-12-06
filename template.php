@@ -4,15 +4,13 @@
 
 <link rel="stylesheet" type="text/css" href="app.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="./?do=getVars"></script>
 <script src="tools.js"></script>
 <script src="upload.js"></script>
 <script>
 
 $(document).ready(function()
 {
-	<?=$this->getJSVar();?>
-	var XSRF = (document.cookie.match('(^|; )_sfm_xsrf=([^;]*)')||0)[2];
-
 	$.fn.tablesorter = function() {
 		var $table = this;
 		this.find('th').click(function() {
@@ -78,31 +76,33 @@ $(document).ready(function()
 		return false;
     });
     
-<?php if($this->AllowUpload()): ?>
-	// file upload stuff
-	$('#file_drop_target').on('dragover',function(){
-		$(this).addClass('drag_over');
-		return false;
-	}).on('dragend',function(){
-		$(this).removeClass('drag_over');
-		return false;
-	}).on('drop',function(e){
-		e.preventDefault();
-		var files = e.originalEvent.dataTransfer.files;
-		$.each(files,function(k,file) {
-			uploadFile(file);
+	if (ALLOW_UPLOAD) {
+		// file upload stuff
+		$('#file_drop_target').on('dragover',function(){
+			$(this).addClass('drag_over');
+			return false;
+		}).on('dragend',function(){
+			$(this).removeClass('drag_over');
+			return false;
+		}).on('drop',function(e){
+			e.preventDefault();
+			var files = e.originalEvent.dataTransfer.files;
+			$.each(files,function(k,file) {
+				uploadFile(file);
+			});
+			$(this).removeClass('drag_over');
 		});
-		$(this).removeClass('drag_over');
-	});
 
-	$('input[type=file]').change(function(e) {
-		e.preventDefault();
-		$.each(this.files,function(k,file) {
-			uploadFile(file);
+		$('input[type=file]').change(function(e) {
+			e.preventDefault();
+			$.each(this.files,function(k,file) {
+				uploadFile(file);
+			});
 		});
-	});
-
-<?php endif; ?>
+	}
+	else {
+		$('#file_drop_target').addClass('invisible')
+	}
 
 })
 
@@ -118,13 +118,11 @@ $(document).ready(function()
                 </form>
             <?php endif; ?>
 
-            <?php if ($this->AllowUpload()): ?>
-                <div id="file_drop_target">
-                    Drag Files Here To Upload
-                    <b>or</b>
-                    <input type="file" multiple />
-                </div>
-            <?php endif; ?>
+			<div id="file_drop_target">
+				Drag Files Here To Upload
+				<b>or</b>
+				<input type="file" multiple />
+			</div>
 
             <div id="breadcrumb">&nbsp;</div>
 

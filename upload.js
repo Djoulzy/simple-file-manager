@@ -20,7 +20,7 @@ function uploadFile(file) {
 	xhr.open('POST', '?');
 	xhr.onload = function() {
 		$row.remove();
-		list();
+		list('#list', ALLOW_DIRECT_LINK);
 	};
 	xhr.upload.onprogress = function(e){
 		if(e.lengthComputable) {
