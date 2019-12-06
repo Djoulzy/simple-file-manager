@@ -3,6 +3,7 @@
 Simple PHP File Manager
 Copyright John Campbell (jcampbell1)
 
+Class version by Julien Marusi (Djoulzy)
 Liscense: MIT
 ********************************/
 
@@ -62,9 +63,6 @@ class FBro
 		if (substr($this->start_dir, -1) == DIRECTORY_SEPARATOR) $this->start_dir = rtrim($this->start_dir, DIRECTORY_SEPARATOR);
 		if ($_REQUEST['file'][0] == DIRECTORY_SEPARATOR) $_REQUEST['file'] = ltrim($_REQUEST['file'], DIRECTORY_SEPARATOR);
 		$tmp = $this->start_dir .DIRECTORY_SEPARATOR. $_REQUEST['file'];
-		
-		self::logger('CHROOT: '.$this->start_dir.' - CWD: '.$_REQUEST['file']);
-		self::logger('Target: '.$tmp);
 
 		if($tmp === false)
 			self::err(404,'File or Directory Not Found');
@@ -88,22 +86,16 @@ class FBro
 	}
 
 	public function getJSVar() {
-		self::logger('getJSVar');
 		header('Content-Type: text/javascript');
 		$tmp = "\n// Injected PHP vars\n";
 		$tmp .= 'var MAX_UPLOAD_SIZE = '.$this->getMaxUpFile()."\n";
 		$tmp .= 'var ALLOW_DIRECT_LINK = '.$this->AllowDirectLink()."\n";
 		$tmp .= 'var ALLOW_UPLOAD = '.$this->AllowUpload()."\n";
+		$tmp .= 'var ALLOW_CREATE_FOLDER = '.$this->AllowCreateFolder()."\n";
 		$tmp .= 'var XSRF = (document.cookie.match("(^|; )_sfm_xsrf=([^;]*)")||0)[2];'."\n";
 		$tmp .= "// End PHP vars\n\n";
 
 		echo $tmp;
-	}
-
-	static public function logger($mess) {
-		$fd = fopen('./app.log', 'a');
-		fwrite($fd, sprintf("%s : %s\n", date('Y/m/d H:i:s'), $mess));
-		fclose($fd);
 	}
 
 	public static function is_entry_ignored($entry, $allow_show_folders, $hidden_extensions)
@@ -183,7 +175,6 @@ class FBro
 
 	private function list($file)
 	{
-		self::logger('List: '.$file);
 		if (is_dir($file)) {
 			$directory = $file;
 			$result = [];
@@ -213,14 +204,12 @@ class FBro
 
 	private function read($file)
 	{
-		self::logger('Read: '.$file);
 		header('Content-Type: '.mime_content_type($file));
 		readfile($file);
 	}
 
 	private function delete($file)
 	{
-		self::logger('Delete: '.$file);
 		if($this->allow_delete) {
 			self::rmrf($file);
 		}
@@ -273,15 +262,12 @@ class FBro
 	}
 
 	public function AllowCreateFolder() {
-		return $this->allow_create_folder;
+		if ($this->allow_create_folder) return 'true';
+		else return 'false';
 	}
 
 	private function actions($file)
 	{
-		// if (!empty($_REQUEST['file'])) $file = $_REQUEST['file'];
-		// else $file = $this->start_dir;
-		
-		self::logger('Action: '.$file);
 		if($_GET['do'] == 'list') {
 			$this->list($file);
 		} elseif ($_GET['do'] == 'getVars') {
