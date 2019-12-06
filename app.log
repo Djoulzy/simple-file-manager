@@ -1488,3 +1488,81 @@ Strating...
 2019/12/06 07:22:31 : Target: /home/jules/
 2019/12/06 07:22:31 : Action: /home/jules/
 2019/12/06 07:22:31 : List: /home/jules/
+2019/12/06 07:23:19 : CHROOT: /home/jules - CWD: tinymce
+2019/12/06 07:23:19 : Target: /home/jules/tinymce
+2019/12/06 07:23:19 : Action: /home/jules/tinymce
+2019/12/06 07:23:19 : List: /home/jules/tinymce
+2019/12/06 07:23:25 : CHROOT: /home/jules - CWD: tinymce/changelog.txt
+2019/12/06 07:23:25 : Target: /home/jules/tinymce/changelog.txt
+2019/12/06 07:23:25 : Action: /home/jules/tinymce/changelog.txt
+2019/12/06 07:24:48 : CHROOT: /home/jules - CWD: tinymce
+2019/12/06 07:24:48 : Target: /home/jules/tinymce
+2019/12/06 07:24:48 : Action: /home/jules/tinymce
+2019/12/06 07:24:48 : CHROOT: /home/jules - CWD: tinymce
+2019/12/06 07:24:48 : Target: /home/jules/tinymce
+2019/12/06 07:24:48 : Action: /home/jules/tinymce
+2019/12/06 07:24:48 : List: /home/jules/tinymce
+2019/12/06 07:24:52 : CHROOT: /home/jules - CWD: tinymce
+2019/12/06 07:24:52 : Target: /home/jules/tinymce
+2019/12/06 07:24:52 : Action: /home/jules/tinymce
+2019/12/06 07:24:52 : List: /home/jules/tinymce
+2019/12/06 07:25:49 : CHROOT: /home/jules - CWD: 
+2019/12/06 07:25:49 : Target: /home/jules/
+2019/12/06 07:25:49 : Action: /home/jules/
+2019/12/06 07:25:49 : List: /home/jules/
+2019/12/06 07:25:54 : CHROOT: /home/jules - CWD: tinymce
+2019/12/06 07:25:54 : Target: /home/jules/tinymce
+2019/12/06 07:25:54 : Action: /home/jules/tinymce
+2019/12/06 07:25:54 : List: /home/jules/tinymce
+2019/12/06 07:26:02 : CHROOT: /home/jules - CWD: tinymce/js
+2019/12/06 07:26:02 : Target: /home/jules/tinymce/js
+2019/12/06 07:26:02 : Action: /home/jules/tinymce/js
+2019/12/06 07:26:02 : List: /home/jules/tinymce/js
+2019/12/06 07:26:06 : CHROOT: /home/jules - CWD: tinymce/js/tinymce
+2019/12/06 07:26:06 : Target: /home/jules/tinymce/js/tinymce
+2019/12/06 07:26:06 : Action: /home/jules/tinymce/js/tinymce
+2019/12/06 07:26:06 : List: /home/jules/tinymce/js/tinymce
+2019/12/06 07:26:10 : CHROOT: /home/jules - CWD: tinymce/js/tinymce/langs
+2019/12/06 07:26:10 : Target: /home/jules/tinymce/js/tinymce/langs
+2019/12/06 07:26:10 : Action: /home/jules/tinymce/js/tinymce/langs
+2019/12/06 07:26:10 : List: /home/jules/tinymce/js/tinymce/langs
+2019/12/06 07:26:20 : CHROOT: /home/jules - CWD: tinymce/js
+2019/12/06 07:26:20 : Target: /home/jules/tinymce/js
+2019/12/06 07:26:20 : Action: /home/jules/tinymce/js
+2019/12/06 07:26:20 : List: /home/jules/tinymce/js
+2019/12/06 07:26:24 : CHROOT: /home/jules - CWD: tinymce/js/tinymce
+2019/12/06 07:26:24 : Target: /home/jules/tinymce/js/tinymce
+2019/12/06 07:26:24 : Action: /home/jules/tinymce/js/tinymce
+2019/12/06 07:26:24 : List: /home/jules/tinymce/js/tinymce
+2019/12/06 07:26:27 : CHROOT: /home/jules - CWD: tinymce/js/tinymce/plugins
+2019/12/06 07:26:27 : Target: /home/jules/tinymce/js/tinymce/plugins
+2019/12/06 07:26:27 : Action: /home/jules/tinymce/js/tinymce/plugins
+2019/12/06 07:26:27 : List: /home/jules/tinymce/js/tinymce/plugins
+2019/12/06 07:26:29 : CHROOT: /home/jules - CWD: tinymce/js/tinymce/plugins/charmap
+2019/12/06 07:26:29 : Target: /home/jules/tinymce/js/tinymce/plugins/charmap
+2019/12/06 07:26:29 : Action: /home/jules/tinymce/js/tinymce/plugins/charmap
+2019/12/06 07:26:29 : List: /home/jules/tinymce/js/tinymce/plugins/charmap
+2019/12/06 07:26:33 : CHROOT: /home/jules - CWD: tinymce
+2019/12/06 07:26:33 : Target: /home/jules/tinymce
+2019/12/06 07:26:33 : Action: /home/jules/tinymce
+2019/12/06 07:26:33 : List: /home/jules/tinymce
+2019/12/06 08:21:48 : CHROOT: /home/jules - CWD: 
+2019/12/06 08:21:48 : Target: /home/jules/
+2019/12/06 08:21:48 : CHROOT: /home/jules - CWD: tinymce
+2019/12/06 08:21:48 : Target: /home/jules/tinymce
+2019/12/06 08:21:48 : Action: /home/jules/tinymce
+2019/12/06 08:21:48 : List: /home/jules/tinymce
+2019/12/06 08:25:08 : CHROOT: /home/jules - CWD: 
+2019/12/06 08:25:08 : Target: /home/jules/
+2019/12/06 08:25:08 : Action: /home/jules/
+2019/12/06 08:25:08 : List: /home/jules/
+2019/12/06 08:32:31 : CHROOT: /home - CWD: 
+2019/12/06 08:32:31 : Target: /home/
+2019/12/06 08:32:31 : CHROOT: /home - CWD: 
+2019/12/06 08:32:31 : Target: /home/
+2019/12/06 08:32:31 : Action: /home/
+2019/12/06 08:32:31 : List: /home/
+2019/12/06 08:32:37 : CHROOT: /home - CWD: jules
+2019/12/06 08:32:37 : Target: /home/jules
+2019/12/06 08:32:37 : Action: /home/jules
+2019/12/06 08:32:37 : List: /home/jules

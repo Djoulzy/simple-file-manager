@@ -30,7 +30,7 @@ class FBro
 		$this->allow_delete = true; // Set to false to disable delete button and delete POST request.
 		$this->allow_upload = true; // Set to true to allow upload files
 		$this->allow_create_folder = true; // Set to false to disable folder creation
-		$this->allow_direct_link = true; // Set to false to only allow downloads and not direct link
+		$this->allow_direct_link = false; // Set to false to only allow downloads and not direct link
 		$this->allow_show_folders = true; // Set to false to hide all subdirectories
 
 		$this->disallowed_extensions = ['php'];  // must be an array. Extensions disallowed to be uploaded
@@ -97,7 +97,7 @@ class FBro
 	}
 
 	static public function logger($mess) {
-		$fd = fopen('/var/www/simple-file-manager/app.log', 'a');
+		$fd = fopen('./app.log', 'a');
 		fwrite($fd, sprintf("%s : %s\n", date('Y/m/d H:i:s'), $mess));
 		fclose($fd);
 	}

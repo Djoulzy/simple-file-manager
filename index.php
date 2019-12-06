@@ -1,6 +1,6 @@
 <?php
 require "FBro.php";
 
-$myBro = new FBro("/home/jules");
+$myBro = new FBro("/home");
 
 ?>
