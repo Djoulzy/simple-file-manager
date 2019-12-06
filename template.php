@@ -11,7 +11,7 @@
         <div id="top">
 
 			<div id="create_folder_form">
-                <form action="?" method="post" id="mkdir" />
+                <form action="?" method="post" id="mkdir">
                     <label for=dirname>Create New Folder</label><input id=dirname type=text name=name value="" />
                     <input type="submit" value="create" />
                 </form>
